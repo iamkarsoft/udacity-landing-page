@@ -18,11 +18,10 @@
                 </section>
                 <section>
                     <ul class="nav__links">
-                        <li class="nav__links--items">Home</li>
-                        <li class="nav__links--items">About Us</li>
-                        <li class="nav__links--items">Services</li>
-                        <li class="nav__links--items">Customers</li>
-                        <li class="nav__links--items">Contact</li>
+                        <li class="nav__links--items"><a href="#content">Home</a></li>
+                        <li class="nav__links--items"><a href="#about">About Us</a></li>
+                        <li class="nav__links--items"><a href="#services">Services</a></li>
+                        <li class="nav__links--items"><a href="#contact">Contact</a></li>
                     </ul>
                 </section>
             </nav>
@@ -33,47 +32,95 @@
                     <section class="marketing__lead">
                         <h1>We Help Small Businesses Grow</h1>
                         <p class="lead--sub">
-                        	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut magnam iste dolor libero adipisci quo explicabo iure beatae fugiat praesentium!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut magnam iste dolor libero adipisci quo explicabo iure beatae fugiat praesentium!
                         </p>
                     </section>
                     <section>
-                    	<figure>
-                    		<img src="img/experts.svg" alt="experts svg" class="">
-                    	</figure>
+                        <figure>
+                            <img src="img/experts.svg" alt="experts svg" class="">
+                        </figure>
                     </section>
                 </header>
                 <!-- /banner -->
-                
                 <!-- about us -->
-                <section id="about">
-                	<section>
-                		<img src="img/team.svg" alt="team svg">
-                	</section>
-                	<section>
-                		<h2 class="lead">About Us</h2>
-
-                		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ipsam illo aliquam, est, nisi debitis soluta laborum exercitationem maxime voluptatibus nulla voluptate, nemo amet excepturi maiores itaque saepe. Voluptatem debitis harum at, dignissimos dolorum optio ab accusamus ex quibusdam aliquam!</p>
-                		<p>
-                		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quis nesciunt eligendi id incidunt aut reiciendis cum ea adipisci laborum voluptatum at eveniet corrupti molestiae quisquam obcaecati dolorem ipsam, numquam. Quis nemo odio asperiores dicta. Inventore, dolorum optio ullam corporis molestias natus explicabo, est quas minus? Voluptatem expedita nemo vitae.
-                		</p>
-
-                		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime facilis optio, nam dolorum sed sapiente minus quod fugiat reiciendis asperiores!</p>
-                		<p>Tempore natus praesentium, sequi commodi tenetur illo ab harum cumque blanditiis repellat quisquam ea odit soluta dignissimos accusamus illum esse.</p>
-                	</section>
+                <section id="about" class="seperator">
+                    <section>
+                        <img src="img/team.svg" alt="team svg">
+                    </section>
+                    <section>
+                        <h2 class="lead">About Us</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ipsam illo aliquam, est, nisi debitis soluta laborum exercitationem maxime voluptatibus nulla voluptate, nemo amet excepturi maiores itaque saepe. Voluptatem debitis harum at, dignissimos dolorum optio ab accusamus ex quibusdam aliquam!</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quis nesciunt eligendi id incidunt aut reiciendis cum ea adipisci laborum voluptatum at eveniet corrupti molestiae quisquam obcaecati dolorem ipsam, numquam. Quis nemo odio asperiores dicta. Inventore, dolorum optio ullam corporis molestias natus explicabo, est quas minus? Voluptatem expedita nemo vitae.
+                        </p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime facilis optio, nam dolorum sed sapiente minus quod fugiat reiciendis asperiores!</p>
+                        <p>Tempore natus praesentium, sequi commodi tenetur illo ab harum cumque blanditiis repellat quisquam ea odit soluta dignissimos accusamus illum esse.</p>
+                    </section>
                 </section>
                 <!-- /about us -->
-
                 <!-- services -->
-
-
-
+                <section id="services" class="seperator">
+                    <h2 class="lead">Services</h2>
+                    <section class="content">
+                        <section>
+                            <h2 class="lead--sub">Strategy</h2>
+                            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, repudiandae! </p>
+                        </section>
+                        <section>
+                            <h2 class="lead--sub">Marketing</h2>
+                            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, repudiandae! </p>
+                        </section>
+                        <section>
+                            <h2 class="lead--sub">Sofware</h2>
+                            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, repudiandae! </p>
+                        </section>
+                    </section>
+                </section>
                 <!-- /services -->
+
+                <!-- contact -->
+                <section id="contact" class="seperator">   
+                    <section>
+                        <img src="img/mail.svg" alt="" class="img-responsive">
+                    </section>
+                    <section>
+                        <h2 class="lead">Contact Us</h2>
+
+                        <form action="" style="margin-top: 2rem;">
+                            <div>
+                                <label for="">Name</label>
+                                <input type="text" name="" id="">
+                            </div>
+
+                            <div>
+                                <label for="">Email</label>
+                                <input type="email" name="" id="">
+                            </div>
+
+                            <div>
+                                <label for="">Message</label>
+                                <textarea rows="5" ></textarea>
+                            </div>
+
+
+                            <div>
+                                <button >Submit</button>
+                            </div>
+
+
+                        </form>
+                    </section>
+
+                </section>
+                <!-- /contact -->
+
+
             </section>
         </main>
         <footer>
-           <section>
-           	<p>&copy; 2021 MiniBiz</p>
-           </section>
+            <section>
+                <p>&copy; 2021 MiniBiz</p>
+            </section>
         </footer>
     </article>
     <script type="text/javascript" src="js/app.js"></script>
