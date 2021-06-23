@@ -1,0 +1,169 @@
+:root {
+
+    --blue: #0F78A5;
+    --yellow: #FEC34F;
+    --red:  #e76f51;
+    --green:  #2a9d8f;
+    --darker-gray:  #264653;
+    --black:  #000000;
+    --light-blue: #C1F0FC;
+    --whitish:  #edf2fb;
+
+}
+
+/**
+ * General styling
+ */
+
+h1{
+	font-size:  2rem;
+}
+
+.lead{
+	font-size: 1.8rem;
+}
+
+.lead--sub{
+	font-size: 1.5rem;
+	margin-top: 20px;
+}
+
+
+.img-responsive{
+	  width: 100%;
+  height: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+body {
+    font-family: Inter, sans-serif, serif;
+    font-size: 16px;
+    background:  var(--whitish);
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+	margin-top:  1rem;
+}
+
+/*
+* Main Container
+ */
+
+article {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/*
+* Main Content
+ */
+
+main {
+    flex-grow: 1;
+}
+
+#content{
+}
+
+/*
+* Navigation
+ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--blue);
+    height: 100px;
+    color:  white;
+    padding: 0 1rem;
+}
+
+
+.brand {
+    display: flex;
+}
+
+.nav__links {
+    display: flex;
+}
+
+.nav__links--items {
+    list-style: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/**
+ * Banner
+ */
+
+#banner{
+	display: flex;
+	background:  var(--light-blue);
+	width: 100%;
+	padding: 0 10px;
+	height: 400px;
+
+}
+
+#banner section{
+	width: 50%;
+}
+
+#banner figure{
+	display: flex;
+	justify-content: center;
+	padding: 2rem 0;
+}
+
+#banner img{
+	width: 500px;
+	height: auto;
+}
+
+.marketing__lead{
+	padding: 2rem;
+}
+
+/**
+ * About
+ */
+
+#about{
+	display: flex;
+	padding: 2rem 0;
+	margin: auto 10%;
+}
+
+#about section{
+	width: 50%;
+}
+
+#about img{
+	width: 500px;
+	height:  auto;
+}
+
+/**
+ * Services
+ */
+
+/*
+* footer 
+ */
+
+footer {
+    height: 75px;
+    padding: 0 20px;
+    background:  var(--blue);
+    color: white;
+}
