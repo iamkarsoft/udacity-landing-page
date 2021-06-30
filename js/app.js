@@ -11,7 +11,7 @@ setTimeout(function() {
 }, 3000);
 
 // adding active class on click of a menu item
-for (navLink of navLinks) {
+navLinks.forEach(function(navLink){
     navLink.addEventListener("click", function() {
          activeLink = document.querySelector(".active");
 
@@ -22,7 +22,7 @@ for (navLink of navLinks) {
         this.classList.add("active");
 
     });
-}
+})
 
 /**
  * function to check if scroll is in section
