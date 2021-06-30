@@ -24,6 +24,11 @@ for (navLink of navLinks) {
     });
 }
 
+/**
+ * function to check if scroll is in section
+ * source https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
+ */
+
 function isInViewport(element) {
     const position = element.getBoundingClientRect();
     return (
