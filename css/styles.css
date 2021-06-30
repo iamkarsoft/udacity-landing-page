@@ -17,13 +17,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
 
-
-body,
 html {
+
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+
+}
+
+;
+
+body {
     font-family: Inter, sans-serif, serif;
     font-size: 16px;
     background: var(--whitish);
-    scroll-behavior: smooth;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -74,8 +81,17 @@ p {
 }
 
 
-.seperator{
+.seperator {
     margin: 5rem 0;
+}
+
+#scroll__top{
+   margin-bottom: 10px;
+    background: var(--darker-gray);
+    color:  var(--whitish);
+    width: 90px;
+    padding: 0.5rem;
+
 }
 
 
@@ -87,6 +103,15 @@ p {
     background: var(--red);
     color: white;
     padding: 5px;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: flex;
 }
 
 
@@ -119,16 +144,17 @@ nav {
     padding: 1rem 1rem;
     position: sticky;
     top: 0;
+    z-index: 10000;
 }
 
 .nav__links {
     display: flex;
 }
 
-nav a{
+nav a {
     color: var(--whitish);
     text-decoration: none;
-    font-weight:  bold;
+    font-weight: bold;
 }
 
 .nav__links--items {
@@ -144,7 +170,7 @@ nav a{
 #banner {
     display: grid;
     background: var(--light-blue);
-    grid-template-columns:  repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     padding: 1rem .75rem;
 }
@@ -170,12 +196,12 @@ nav a{
  */
 #about {
     display: grid;
-    grid-template-columns:  repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 2rem 0;
     margin: auto 10%;
 }
 
-#about img{
+#about img {
     width: 75%;
 }
 
@@ -184,17 +210,17 @@ nav a{
 /**
  * Services
  */
-#services{
+#services {
     padding: 5rem;
 }
 
-#services h2{
+#services h2 {
     text-align: center;
 }
 
-#services .content div{
+#services .content div {
     background: #fff;
-    border:  2px solid gray;
+    border: 2px solid gray;
     margin-top: 1rem;
     padding: 1rem;
     border-radius: .5rem;
@@ -213,21 +239,21 @@ nav a{
  */
 
 
-#contact{
+#contact {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 3rem;
 }
 
-#contact div:nth-of-type(1) img{
+#contact div:nth-of-type(1) img {
     width: 75%;
 }
 
-label{
+label {
     display: block;
 }
 
-input{
+input {
     width: 200px;
     display: block;
     border: 1px solid var(--darker-gray);
@@ -237,8 +263,8 @@ input{
     background: var(--whitish);
 }
 
-textarea{
-     width: 400px;
+textarea {
+    width: 400px;
     border: 1px solid var(--darker-gray);
     border-radius: 2px;
     margin: 10px 0;
@@ -247,19 +273,19 @@ textarea{
 }
 
 
-#contact button{
+#contact button {
     background: var(--yellow);
-    color:  var(--blue);
+    color: var(--blue);
     border: 2px solid var(--yellow);
-    font-weight:  600;
+    font-weight: 600;
     height: 35px;
     width: 75px;
 }
 
 footer {
 
-    padding: 1rem 20px;
-    background:  var(--blue);
+    padding: 1rem 20px 0rem 20px;
+    background: var(--blue);
     color: white;
     height: 10vh;
 }
@@ -269,7 +295,7 @@ footer {
 
 @media screen and (max-width: 700px) {
 
-    .lead{
+    .lead {
         text-align: center;
     }
 
@@ -289,7 +315,7 @@ footer {
 
     #banner {
         display: grid;
-        grid-template-columns:  1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
         background: var(--light-blue);
         width: 100%;
@@ -314,93 +340,94 @@ footer {
  * about us
  */
 
-#about{
-    display:  grid;
-    margin-top: 2rem;
-    padding: 1rem 0;
-}
+    #about {
+        display: grid;
+        margin-top: 2rem;
+        padding: 1rem 0;
+    }
 
 
-#about {
-    display: grid;
-    grid-template-columns:  1fr;
-    grid-template-rows: 200px 1fr;
-}
+    #about {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+    }
 
-#about img{
-    width: 75%;
-}
+    #about img {
+        width: 75%;
+    }
 
-/**
+    /**
  * Services
  */
 
-#services h2.lead{
-    text-align: center;
-}
+    #services h2.lead {
+        text-align: center;
+    }
 
-#services div{
-    text-align: center;
+    #services div {
+        text-align: center;
 
-}
+    }
 
-#services .content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    /*justify-content: center;*/
-    padding: 0 .75rem;
-}
+    #services .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        /*justify-content: center;*/
+        padding: 0 .75rem;
+    }
 
-/**
+    /**
  * Contact
  */
 
-#contact{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 
-#contact .img{
-    display: none;
-}
-#contact img{
-    width: 75%;
-    margin-top: 4rem;
+    #contact .img {
+        display: none;
+    }
 
-}
+    #contact img {
+        width: 75%;
+        margin-top: 4rem;
+
+    }
 
 
 
-form{
-    /*padding: 0 2rem;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    form {
+        /*padding: 0 2rem;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-label{
-    display: block;
-}
+    label {
+        display: block;
+    }
 
-input{
-     width: 200px;
-    border: 1px solid var(--darker-gray);
-    border-radius: 2px;
-    margin: 10px 0;
-    padding: 10px;
-    background: var(--whitish);
-}
+    input {
+        width: 200px;
+        border: 1px solid var(--darker-gray);
+        border-radius: 2px;
+        margin: 10px 0;
+        padding: 10px;
+        background: var(--whitish);
+    }
 
-textarea{
-     width: 200px;
-    border: 1px solid var(--darker-gray);
-    border-radius: 2px;
-    margin: 10px 0;
-    padding: 10px;
-    background: var(--whitish);
-}
+    textarea {
+        width: 200px;
+        border: 1px solid var(--darker-gray);
+        border-radius: 2px;
+        margin: 10px 0;
+        padding: 10px;
+        background: var(--whitish);
+    }
 
 
 
