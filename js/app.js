@@ -61,7 +61,7 @@ window.addEventListener('scroll', function() {
     // }
 
 
-    //logic 
+    //logic for adding active class to corresponding section link
 
     sections.forEach(function(section) {
 
