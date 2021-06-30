@@ -10,18 +10,22 @@ setTimeout(function() {
     navBar.classList.add("hidden");
 }, 3000);
 
-// adding active class on click of a menu item
-navLinks.forEach(function(navLink){
-    navLink.addEventListener("click", function() {
-         activeLink = document.querySelector(".active");
+
+//function for adding class to navigation link
+
+function addActiveLink(){
+
+	activeLink = document.querySelector(".active");
 
         if (activeLink) {
             activeLink.classList.remove("active");
         }
 
         this.classList.add("active");
-
-    });
+}
+// adding active class on click of a menu item
+navLinks.forEach(function(navLink){
+    navLink.addEventListener("click", addActiveLink);
 })
 
 /**
