@@ -8,3 +8,8 @@ This project is intended for passing the [udacity frontend nano degree project](
 - `index.html` is the entry point of the web project
 - `css/styles.css` contains all the styling for the project
 - `js/app.js` containts all the javacript that handles the site interactivity
+
+
+## Acknowledgement
+
+[Javascript Tutorial](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/) is the source For the feature of adding class to corresponding navigation link when in a particular section. [Javascript Tutorial](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/)
