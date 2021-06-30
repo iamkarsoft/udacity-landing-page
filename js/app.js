@@ -71,7 +71,7 @@ window.addEventListener('scroll', function() {
         //storing section info into a variable
         const linkSection = section.getAttribute('data-section');
 
-        if ((position.left >= position.top) && (position.left <= position.bottom)) {
+        if (isInViewport(section)) {
              activeLink = document.querySelector(".active");
 
             if (activeLink) {
