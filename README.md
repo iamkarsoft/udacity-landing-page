@@ -1,6 +1,6 @@
 # Landing Page Project
 
-This project is intended for passing the udacity frontend nano degree project. 
+This project is intended for passing the [udacity frontend nano degree project](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011). 
 
 
 ## File Structure

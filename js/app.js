@@ -3,7 +3,7 @@ const navLinks = document.querySelectorAll('.nav__links--items a');
 const sections = document.querySelectorAll('section');
 const navBar = document.querySelector('nav');
 const toTop = document.querySelector('#scroll__top');
-
+let activeLink = document.querySelector(".active");
 // hide navigation while not scrolling
 
 setTimeout(function() {
@@ -13,7 +13,7 @@ setTimeout(function() {
 // adding active class on click of a menu item
 for (navLink of navLinks) {
     navLink.addEventListener("click", function() {
-        const activeLink = document.querySelector(".active");
+         activeLink = document.querySelector(".active");
 
         if (activeLink) {
             activeLink.classList.remove("active");
@@ -50,25 +50,31 @@ window.addEventListener('scroll', function() {
     navBar.classList.remove("hidden")
 
     // show scroll to top button
-    if ((window.innerHeigth + window.scrollY) >= document.body.offsetHeight) {
-        toTop.style.display = "initial"
-    }
+    // !todo 
+    // if ((window.innerHeigth + window.scrollY) >= document.body.offsetHeight) {
+    //     toTop.style.display = "initial"
+    // }
 
 
-    //function to check if it's in viewport 
+    //logic 
 
     sections.forEach(function(section) {
+
+    		//getting information about scroll position
         const position = section.getBoundingClientRect();
+
+        //storing section info into a variable
         const linkSection = section.getAttribute('data-section');
-        // console.log(linkSection);
 
         if ((position.left >= position.top) && (position.left <= position.bottom)) {
-            const activeLink = document.querySelector(".active");
+             activeLink = document.querySelector(".active");
 
             if (activeLink) {
                 activeLink.classList.remove("active");
             }
 
+
+            // matching navigation links to in section data attribute
             const navLink = document.querySelector(`.nav__links--items a[href="#${linkSection}"]`)
             navLink.classList.add("active");
 
