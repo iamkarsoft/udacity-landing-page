@@ -12,4 +12,4 @@ This project is intended for passing the [udacity frontend nano degree project](
 
 ## Acknowledgement
 
-[Javascript Tutorial](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/) is the source For the feature of adding class to corresponding navigation link when in a particular section. [Javascript Tutorial](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/)
+[Javascript Tutorial](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/) is the source and inspiration For the feature of adding class to corresponding navigation link when in a particular section.

@@ -3,6 +3,12 @@ const navLinks = document.querySelectorAll('.nav__links--items a');
 const sections = document.querySelectorAll('section');
 const navBar = document.querySelector('nav');
 const toTop = document.querySelector('#scroll__top');
+
+
+// smooth scrolling
+const htmlBody = document.querySelector('html');
+htmlBody.style.scrollBehavior = "smooth";
+
 let activeLink = document.querySelector(".active");
 // hide navigation while not scrolling
 
@@ -22,7 +28,9 @@ function addActiveLink(){
         }
 
         this.classList.add("active");
+
 }
+
 // adding active class on click of a menu item
 navLinks.forEach(function(navLink){
     navLink.addEventListener("click", addActiveLink);
@@ -50,15 +58,11 @@ function isInViewport(element) {
 
 
 window.addEventListener('scroll', function() {
+
+
     //show navigation on scroll
 
     navBar.classList.remove("hidden")
-
-    // show scroll to top button
-    // !todo 
-    // if ((window.innerHeigth + window.scrollY) >= document.body.offsetHeight) {
-    //     toTop.style.display = "initial"
-    // }
 
 
     //logic for adding active class to corresponding section link
@@ -68,16 +72,18 @@ window.addEventListener('scroll', function() {
     		//getting information about scroll position
         const position = section.getBoundingClientRect();
 
-        //storing section info into a variable
-        const linkSection = section.getAttribute('data-section');
+        // checking  of position of the scroll is in the section
 
-        if (isInViewport(section)) {
+        if ((position.left >= position.top) && (position.left <= position.bottom)) {
+
+        // getting then name of the data attribute
+        const linkSection = section.getAttribute('data-section');
+             
              activeLink = document.querySelector(".active");
 
             if (activeLink) {
                 activeLink.classList.remove("active");
             }
-
 
             // matching navigation links to in section data attribute
             const navLink = document.querySelector(`.nav__links--items a[href="#${linkSection}"]`)
