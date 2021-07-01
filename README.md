@@ -12,4 +12,5 @@ This project is intended for passing the [udacity frontend nano degree project](
 
 ## Acknowledgement
 
-[Javascript Tutorial](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/) is the source and inspiration For the feature of adding class to corresponding navigation link when in a particular section.
+- [Javascript Tutorial](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/) is the source and inspiration For the feature of adding class to corresponding navigation link when in a particular section.
+- [offsetTop](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop) and [scroll](https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll) were resources used to handle scroll to section on click
