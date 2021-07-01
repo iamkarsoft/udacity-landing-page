@@ -1,8 +1,22 @@
 // selecting dom elements
+const navContainer = document.querySelector('.nav__links');
 const navLinks = document.querySelectorAll('.nav__links--items a');
 const sections = document.querySelectorAll('section');
 const navBar = document.querySelector('nav');
 const toTop = document.querySelector('#scroll__top');
+
+
+//building menu links
+const nav = `
+ <li class="nav__links--items"><a href="#banner">Home</a></li>
+<li class="nav__links--items"><a href="#about">About Us</a></li>
+<li class="nav__links--items"><a href="#services">Services</a></li>
+<li class="nav__links--items"><a href="#contact">Contact</a></li>`;
+
+
+// appending menu links to menu container
+navContainer.insertAdjacentHTML('afterbegin',nav);
+
 
 
 // smooth scrolling
@@ -17,49 +31,37 @@ setTimeout(function() {
 }, 3000);
 
 
-//function for adding class to navigation link
 
-// function addActiveLink() {
-
-//     activeLink = document.querySelector(".active");
-
-//     if (activeLink) {
-//         activeLink.classList.remove("active");
-//     }
-
-//     this.classList.add("active");
-
-// }
-
-//scroll to section function
-
-// Using event listeners, add a click event to your link (You will have to prevent the default action of a click. This will allow you to change the behaviour. (In this case it will allow you to scroll)
-
-
-// Remove the active class from any previous links that have been clicked, and any previous section 
-// Next add the active style to the section that is in view 
-//Add active style to the link that was clicked
-// Finally scroll to the section using scrollIntoView()
 
 // adding active class on click of a menu item
 navLinks.forEach(function(navLink) {
     // navLink.addEventListener("click", addActiveLink);
 
-    navLink.addEventListener('click', function(e)  {
+    navLink.addEventListener('click', function(e) {
+
+        //prevent default click action
         e.preventDefault();
+
+        // get section name 
         let href = e.target.getAttribute('href');
+
+        // get the distance of the section to scrll to
         let topPos = document.querySelector(href).offsetTop;
+
+        // check if existing active link and remove them
         let activeLink = document.querySelector(".active");
 
-        if(activeLink){
+        if (activeLink) {
             activeLink.classList.remove("active");
         }
+
+        //add active state to the clicked link
         e.target.classList.add("active");
 
 
 
- 
-  window.scrollTo({top: topPos, behavior: 'smooth'});
+        // scroll to clicked section with a smooth behavior
+        window.scrollTo({ top: topPos, behavior: 'smooth' });
 
 
 
